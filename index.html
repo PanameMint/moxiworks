@@ -62,7 +62,8 @@
   .share span{font-family:'Poppins',sans-serif;font-weight:700;margin-right:6px;}
   .sicon{
     width:34px;height:34px;border-radius:50%;background:var(--mint);
-    display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--navy);
+    display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--navy);
+    text-decoration:none;font-family:'Poppins',sans-serif;font-weight:600;
   }
 
   h1.title{font-size:38px;line-height:1.18;font-weight:700;letter-spacing:-0.5px;max-width:680px;}
@@ -72,16 +73,24 @@
     padding:7px 20px;border-radius:30px;
   }
 
-  .heropanel{
-    margin-top:40px;background:#fff;border:1px solid #e3ecf0;border-radius:18px;
-    position:relative;overflow:hidden;height:220px;display:flex;align-items:center;justify-content:center;
+  .heroshell{position:relative;margin-top:44px;}
+  .heroshell .tag-float{position:absolute;top:-14px;left:26px;z-index:4;margin:0;}
+  .herowrap{
+    background:var(--page);border-radius:24px;
+    position:relative;overflow:hidden;padding:36px;
   }
-  .heropanel .shape1{position:absolute;top:0;left:0;width:0;height:0;border-style:solid;border-width:0 0 130px 170px;border-color:transparent transparent var(--page) transparent;}
-  .heropanel .shape2{position:absolute;bottom:0;right:0;width:280px;height:100%;background:linear-gradient(135deg,var(--teal),var(--mint));clip-path:polygon(45% 100%,100% 0,100% 100%);}
-  .heropanel .namestack{position:relative;z-index:2;text-align:left;}
-  .heropanel .namestack .big{font-family:'Poppins',sans-serif;font-weight:700;font-size:56px;color:var(--navy);line-height:1;}
-  .heropanel .namestack .small{font-family:'Inter',sans-serif;font-size:20px;color:var(--navy);margin-top:6px;}
-  .heropanel .bar{width:70px;height:8px;background:#3f8ecb;margin-top:8px;}
+  .herowrap .mountain-tl{position:absolute;top:0;left:0;width:170px;height:150px;z-index:3;pointer-events:none;}
+  .herowrap .mountain-br{position:absolute;bottom:0;right:0;width:170px;height:150px;z-index:3;transform:rotate(180deg);pointer-events:none;}
+  .heropanel{
+    position:relative;z-index:1;background:#fff;border-radius:18px;
+    box-shadow:0 10px 30px rgba(10,54,75,0.08);
+    padding:52px 30px;min-height:160px;width:100%;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  }
+  .heropanel .namestack{position:relative;z-index:2;}
+  .heropanel .namestack .big{font-family:'Poppins',sans-serif;font-weight:700;font-size:40px;color:var(--navy);line-height:1.1;letter-spacing:-0.5px;}
+  .heropanel .bar{width:60px;height:6px;background:#3f8ecb;margin:12px auto 0;}
+  .heropanel .namestack .small{font-family:'Inter',sans-serif;font-size:17px;color:var(--navy);margin-top:14px;}
 
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:52px;}
   .stat .num{font-family:'Poppins',sans-serif;font-weight:500;font-size:38px;color:var(--navy);}
@@ -140,8 +149,10 @@
     .stats{grid-template-columns:repeat(2,1fr);}
     .navlinks{display:none;}
     .nextgrid{grid-template-columns:1fr;}
-    .heropanel{height:auto;padding:30px 20px;}
-    .heropanel .namestack .big{font-size:38px;}
+    .herowrap{padding:20px;}
+    .heropanel{padding:36px 20px;}
+    .heropanel .namestack .big{font-size:28px;}
+    .herowrap .mountain-tl,.herowrap .mountain-br{width:110px;height:96px;}
   }
 </style>
 </head>
@@ -149,7 +160,13 @@
 
 <div class="topbar">
   <span><strong>CASE STUDY:</strong> How Iliass Turned Five Years of Sales Into a Blueprint for ActivePipe</span>
-  <a class="pill" href="mailto:iliass.wagner@gmail.com">Book a Demo</a>
+  <div style="position:relative;display:inline-block;">
+    <button class="pill" id="demoBtn1" style="border:none;cursor:pointer;font:inherit;">Book a Demo</button>
+    <div id="demoOptions1" style="display:none;position:absolute;top:130%;right:0;background:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(10,54,75,0.2);padding:8px;min-width:150px;z-index:20;">
+      <a href="tel:0481797691" style="display:block;padding:8px 12px;border-radius:8px;color:var(--navy);font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;">Call</a>
+      <a href="mailto:iliass.wagner@gmail.com" style="display:block;padding:8px 12px;border-radius:8px;color:var(--navy);font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;">Email</a>
+    </div>
+  </div>
 </div>
 
 <nav class="mainnav">
@@ -178,23 +195,32 @@
       <div class="cardhead">
         <div class="updated">Last updated: September 2026</div>
         <div class="share">
-          <span>Share</span>
-          <div class="sicon">in</div>
-          <div class="sicon">✉</div>
-          <div class="sicon">🔗</div>
+          <span>Connect</span>
+          <a class="sicon" href="https://www.linkedin.com/in/iliass-okaf-a12274212/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+          <a class="sicon" href="https://www.realestate.com.au/agent/iliass-okaf-3410792" target="_blank" rel="noopener" title="realestate.com.au">REA</a>
+          <a class="sicon" href="mailto:iliass.wagner@gmail.com" title="Email">✉</a>
         </div>
       </div>
 
       <h1 class="title">How Iliass Turned Five Years of Real Estate Sales Into a Blueprint for Selling ActivePipe</h1>
-      <div class="tag">Candidate Story</div>
-
-      <div class="heropanel">
-        <div class="shape1"></div>
-        <div class="shape2"></div>
-        <div class="namestack">
-          <div class="big">ILIASS</div>
-          <div class="small">Melbourne, Australia</div>
-          <div class="bar"></div>
+      <div class="heroshell">
+        <div class="tag tag-float">Candidate Story</div>
+        <div class="herowrap">
+          <svg class="mountain-tl" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="mtGrad1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3fa9a0"/><stop offset="1" stop-color="#81ef95"/></linearGradient></defs>
+            <path d="M0,0 L190,0 C218,5 228,22 208,48 L98,195 C78,222 42,248 0,260 Z" fill="url(#mtGrad1)"/>
+          </svg>
+          <svg class="mountain-br" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="mtGrad2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3fa9a0"/><stop offset="1" stop-color="#81ef95"/></linearGradient></defs>
+            <path d="M0,0 L190,0 C218,5 228,22 208,48 L98,195 C78,222 42,248 0,260 Z" fill="url(#mtGrad2)"/>
+          </svg>
+          <div class="heropanel">
+            <div class="namestack">
+              <div class="big">Iliass Okaf</div>
+              <div class="bar"></div>
+              <div class="small">Account Executive (in the making) · Melbourne, Australia</div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -222,7 +248,13 @@
         <div class="ctatext">
           <h3>Ready to Activate This Pipeline?</h3>
           <p class="signoff">I am French. I am used to making the first move. Over to you.</p>
-          <a class="pill" href="mailto:iliass.wagner@gmail.com">Book a Demo</a>
+          <div style="position:relative;display:inline-block;">
+            <button class="pill" id="demoBtn2" style="border:none;cursor:pointer;font:inherit;">Book a Demo</button>
+            <div id="demoOptions2" style="display:none;position:absolute;top:130%;left:0;background:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(10,54,75,0.2);padding:8px;min-width:150px;z-index:20;">
+              <a href="tel:0481797691" style="display:block;padding:8px 12px;border-radius:8px;color:var(--navy);font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;">Call</a>
+              <a href="mailto:iliass.wagner@gmail.com" style="display:block;padding:8px 12px;border-radius:8px;color:var(--navy);font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;">Email</a>
+            </div>
+          </div>
         </div>
         <div class="ctaphoto">
           <img src="iliass-photo.jpg" alt="Iliass">
@@ -268,12 +300,11 @@
         <div class="k">Side Project</div>
         <div class="t">Sold Off Market — my own outbound lead-gen platform</div>
       </a>
-      <div class="nextcard" id="getInTouchCard" style="cursor:pointer;position:relative;">
+      <div class="nextcard" id="getInTouchCard" style="position:relative;">
         <div class="k">Get in Touch</div>
-        <div class="t">iliass.wagner@gmail.com · 0481 797 691</div>
-        <div id="contactOptions" style="display:none;margin-top:14px;display:flex;flex-direction:column;gap:8px;">
-          <a href="tel:0481797691" style="display:block;background:var(--page);border-radius:10px;padding:10px 14px;font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;color:var(--navy);">Call 0481 797 691</a>
-          <a href="mailto:iliass.wagner@gmail.com" style="display:block;background:var(--page);border-radius:10px;padding:10px 14px;font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;color:var(--navy);">Email iliass.wagner@gmail.com</a>
+        <div style="display:flex;gap:10px;margin-top:10px;">
+          <a href="tel:0481797691" style="flex:1;text-align:center;background:var(--page);border-radius:10px;padding:10px 14px;font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;color:var(--navy);">Call</a>
+          <a href="mailto:iliass.wagner@gmail.com" style="flex:1;text-align:center;background:var(--page);border-radius:10px;padding:10px 14px;font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;color:var(--navy);">Email</a>
         </div>
       </div>
     </div>
@@ -333,14 +364,23 @@
   </div>
 </section>
 <script>
-  document.getElementById('getInTouchCard').addEventListener('click', function(e){
-    if(e.target.tagName === 'A') return;
-    var opts = document.getElementById('contactOptions');
-    opts.style.display = opts.style.display === 'none' ? 'flex' : 'none';
-  });
   document.getElementById('trackRecordCard').addEventListener('click', function(){
     var panel = document.getElementById('trackRecordPanel');
     panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+  });
+  document.getElementById('demoBtn1').addEventListener('click', function(e){
+    e.stopPropagation();
+    var opts = document.getElementById('demoOptions1');
+    opts.style.display = opts.style.display === 'none' ? 'block' : 'none';
+  });
+  document.getElementById('demoBtn2').addEventListener('click', function(e){
+    e.stopPropagation();
+    var opts = document.getElementById('demoOptions2');
+    opts.style.display = opts.style.display === 'none' ? 'block' : 'none';
+  });
+  document.addEventListener('click', function(){
+    document.getElementById('demoOptions1').style.display = 'none';
+    document.getElementById('demoOptions2').style.display = 'none';
   });
 </script>
 
