@@ -27,8 +27,8 @@
 
   .topbar{
     background:linear-gradient(120deg,#0a2e3f,#1d5266);
-    color:#fff;padding:14px 24px;text-align:center;font-size:14px;
-    display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;
+    color:#fff;padding:16px 24px;font-size:14px;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
   }
   .topbar strong{font-weight:700;}
   .pill{
@@ -38,15 +38,10 @@
   }
   .pill:hover{background:var(--mint-deep);}
 
-  nav.mainnav{
-    background:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;
-  }
   .logo{display:flex;align-items:center;gap:10px;}
   .logo svg{display:block;}
-  .logo .word{font-family:'Poppins',sans-serif;font-size:22px;font-weight:600;color:var(--navy);}
-  .logo .sub{font-size:11px;color:var(--muted);margin-top:-4px;font-family:'Inter',sans-serif;}
-  .navlinks{display:flex;align-items:center;gap:28px;font-size:15px;color:var(--navy);}
-  .navlinks a.login{color:var(--navy);}
+  .topbar .logo .word{font-family:'Poppins',sans-serif;font-size:17px;font-weight:600;color:#fff;}
+  .topbar .logo .sub{font-size:11px;color:#c9dbe3;margin-top:-2px;font-family:'Inter',sans-serif;}
 
   main{padding:36px 0 0;}
   .crumb{font-size:15px;color:var(--navy);margin-bottom:22px;display:inline-block;}
@@ -102,6 +97,7 @@
   }
   .pullquote .who{font-weight:400;}
 
+  .body{margin-top:38px;}
   .body p{font-size:17px;color:var(--navy);margin:0 0 20px;max-width:66ch;}
 
   .closingquote{
@@ -147,7 +143,6 @@
     .card{padding:34px 24px 40px;}
     h1.title{font-size:28px;}
     .stats{grid-template-columns:repeat(2,1fr);}
-    .navlinks{display:none;}
     .nextgrid{grid-template-columns:1fr;}
     .herowrap{padding:20px;}
     .heropanel{padding:36px 20px;}
@@ -159,6 +154,16 @@
 <body>
 
 <div class="topbar">
+  <div class="logo">
+    <svg width="30" height="30" viewBox="0 0 34 34" fill="none">
+      <path d="M17 3 L30 27 L4 27 Z" fill="url(#g)"/>
+      <defs><linearGradient id="g" x1="4" y1="27" x2="30" y2="3"><stop offset="0" stop-color="#3fa9a0"/><stop offset="1" stop-color="#81ef95"/></linearGradient></defs>
+    </svg>
+    <div>
+      <div class="word">Iliass Okaf</div>
+      <div class="sub">Candidate Story · for ActivePipe / MoxiWorks</div>
+    </div>
+  </div>
   <span><strong>CASE STUDY:</strong> How Iliass Turned Five Years of Sales Into a Blueprint for ActivePipe</span>
   <div style="position:relative;display:inline-block;">
     <button class="pill" id="demoBtn1" style="border:none;cursor:pointer;font:inherit;">Book a Demo</button>
@@ -168,24 +173,6 @@
     </div>
   </div>
 </div>
-
-<nav class="mainnav">
-  <div class="logo">
-    <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-      <path d="M17 3 L30 27 L4 27 Z" fill="url(#g)"/>
-      <defs><linearGradient id="g" x1="4" y1="27" x2="30" y2="3"><stop offset="0" stop-color="#3fa9a0"/><stop offset="1" stop-color="#81ef95"/></linearGradient></defs>
-    </svg>
-    <div>
-      <div class="word">Iliass Okaf</div>
-      <div class="sub">Candidate Story · for ActivePipe / MoxiWorks</div>
-    </div>
-  </div>
-  <div class="navlinks">
-    <a class="login" href="https://linkedin.com/in/iliass-okaf-a12274212">LinkedIn</a>
-    <a href="mailto:iliass.wagner@gmail.com">Contact</a>
-    <a class="pill" href="tel:0481797691">Call Me</a>
-  </div>
-</nav>
 
 <main>
   <div class="wrap">
@@ -197,7 +184,9 @@
         <div class="share">
           <span>Connect</span>
           <a class="sicon" href="https://www.linkedin.com/in/iliass-okaf-a12274212/" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          <a class="sicon" href="https://www.realestate.com.au/agent/iliass-okaf-3410792" target="_blank" rel="noopener" title="realestate.com.au">REA</a>
+          <a class="sicon" href="https://www.realestate.com.au/agent/iliass-okaf-3410792" target="_blank" rel="noopener" title="realestate.com.au">
+            <img src="https://www.google.com/s2/favicons?domain=realestate.com.au&sz=64" alt="realestate.com.au" style="width:18px;height:18px;border-radius:3px;">
+          </a>
           <a class="sicon" href="mailto:iliass.wagner@gmail.com" title="Email">✉</a>
         </div>
       </div>
@@ -248,13 +237,7 @@
         <div class="ctatext">
           <h3>Ready to Activate This Pipeline?</h3>
           <p class="signoff">I am French. I am used to making the first move. Over to you.</p>
-          <div style="position:relative;display:inline-block;">
-            <button class="pill" id="demoBtn2" style="border:none;cursor:pointer;font:inherit;">Book a Demo</button>
-            <div id="demoOptions2" style="display:none;position:absolute;top:130%;left:0;background:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(10,54,75,0.2);padding:8px;min-width:150px;z-index:20;">
-              <a href="tel:0481797691" style="display:block;padding:8px 12px;border-radius:8px;color:var(--navy);font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;">Call</a>
-              <a href="mailto:iliass.wagner@gmail.com" style="display:block;padding:8px 12px;border-radius:8px;color:var(--navy);font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;">Email</a>
-            </div>
-          </div>
+          <a class="pill" href="cv.pdf" target="_blank" rel="noopener">See the Full Résumé</a>
         </div>
         <div class="ctaphoto">
           <img src="iliass-photo.jpg" alt="Iliass">
@@ -373,14 +356,8 @@
     var opts = document.getElementById('demoOptions1');
     opts.style.display = opts.style.display === 'none' ? 'block' : 'none';
   });
-  document.getElementById('demoBtn2').addEventListener('click', function(e){
-    e.stopPropagation();
-    var opts = document.getElementById('demoOptions2');
-    opts.style.display = opts.style.display === 'none' ? 'block' : 'none';
-  });
   document.addEventListener('click', function(){
     document.getElementById('demoOptions1').style.display = 'none';
-    document.getElementById('demoOptions2').style.display = 'none';
   });
 </script>
 
@@ -392,7 +369,7 @@
           <path d="M17 3 L30 27 L4 27 Z" fill="url(#g2)"/>
           <defs><linearGradient id="g2" x1="4" y1="27" x2="30" y2="3"><stop offset="0" stop-color="#3fa9a0"/><stop offset="1" stop-color="#81ef95"/></linearGradient></defs>
         </svg>
-        <div class="word" style="font-size:18px;">Iliass Okaf</div>
+        <div class="word" style="font-size:18px;color:var(--navy);">Iliass Okaf</div>
       </div>
     </div>
     <div class="footcol">
